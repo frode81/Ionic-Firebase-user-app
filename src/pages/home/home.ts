@@ -6,9 +6,17 @@ import { NavController } from 'ionic-angular';
   templateUrl: 'home.html'
 })
 export class HomePage {
+  constructor(public navCtrl: NavController) {}
 
-  constructor(public navCtrl: NavController) {
-
+  goToProfile(): void {
+    this.navCtrl.push('ProfilePage');
   }
 
+  goToCreate(): void {
+    this.navCtrl.push('EventCreatePage');
+  }
+
+  goToList(): void {
+    this.navCtrl.push('EventListPage');
+  }
 }
